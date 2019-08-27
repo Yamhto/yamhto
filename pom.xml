@@ -9,8 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>base</module>
-        <module>java8</module>
+        <module>java-base</module>
+        <module>single-framework</module>
+        <module>common-utils</module>
+        <module>spring-integration</module>
+        <module>springboot-integration</module>
     </modules>
 
     <properties>

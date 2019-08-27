@@ -9,8 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java8</artifactId>
+    <artifactId>springboot-integration</artifactId>
 
-
-
+    <packaging>pom</packaging>
+    <modules>
+        <module>springboot-mybatis</module>
+        <module>springboot-quartz</module>
+        <module>springboot-springbatch</module>
+    </modules>
 </project>
