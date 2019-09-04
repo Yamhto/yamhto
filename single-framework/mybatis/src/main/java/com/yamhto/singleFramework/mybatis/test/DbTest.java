@@ -1,6 +1,6 @@
 package com.yamhto.singleFramework.mybatis.test;
 
-import com.yamhto.singleFramework.mybatis.SqlSessionFactory;
+import com.yamhto.singleFramework.mybatis.MySqlSessionFactory;
 import com.yamhto.singleFramework.mybatis.bean.Hr;
 import com.yamhto.singleFramework.mybatis.mapping.HrMapper;
 import org.apache.ibatis.session.SqlSession;
@@ -16,7 +16,7 @@ import org.apache.ibatis.session.SqlSession;
 public class DbTest {
 
     public static void main(String[] args) {
-        SqlSession session = SqlSessionFactory.getSqlSession();
+        SqlSession session = MySqlSessionFactory.getSqlSession();
 
         HrMapper mapper = session.getMapper(HrMapper.class);
 
@@ -24,6 +24,6 @@ public class DbTest {
 
         System.out.println(hr.getAddress());
 
-        SqlSessionFactory.closeSession(session);
+        MySqlSessionFactory.closeSession(session);
     }
 }
