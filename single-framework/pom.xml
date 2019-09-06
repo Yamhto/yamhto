@@ -14,12 +14,16 @@
     <packaging>pom</packaging>
     <modules>
         <module>mybatis</module>
+        <module>spring</module>
     </modules>
 
     <properties>
         <mybatis.version>3.5.2</mybatis.version>
         <mybatis-generator.version>1.3.2</mybatis-generator.version>
         <mysql-connector.version>8.0.17</mysql-connector.version>
+        <mapper.version>4.0.0</mapper.version>
+        <mapper-generator.version>1.0.0</mapper-generator.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
     </properties>
 
     <dependencyManagement>
@@ -40,6 +44,85 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector.version}</version>
             </dependency>
+
+            <!-- 通用 Mapper -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${mapper.version}</version>
+            </dependency>
+            <!-- 如果你只需要用到通用 Mapper 中的插件，可以只引入 mapper-generator -->
+            <!-- 注意，这个包不需要和上面的 mapper 同时引入，mapper 中包含 generator -->
+            <!-- https://mvnrepository.com/artifact/tk.mybatis/mapper-generator -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-generator</artifactId>
+                <version>${mapper-generator.version}</version>
+            </dependency>
+
+            <!--Spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
