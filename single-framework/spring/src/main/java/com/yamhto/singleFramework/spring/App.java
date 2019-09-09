@@ -1,6 +1,7 @@
 package com.yamhto.singleFramework.spring;
 
 import com.yamhto.singleFramework.spring.bean.SpringBean;
+import com.yamhto.singleFramework.spring.importBean.SpringFactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -18,8 +19,12 @@ public class App {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-conf.xml");
 
+      /*  SpringFactoryBean factoryBean = (SpringFactoryBean)context.getBean("&springBean");
+
+        System.out.println(factoryBean);*/
+
         SpringBean bean = (SpringBean) context.getBean("springBean");
 
-        System.out.println(bean.getId());
+        System.out.println(bean.getId()+"\n"+bean.isSingle());
     }
 }
