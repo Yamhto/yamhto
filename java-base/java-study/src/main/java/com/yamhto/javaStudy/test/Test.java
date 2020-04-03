@@ -5,6 +5,7 @@ import com.yamhto.javaStudy.Conf.Start;
 import com.yamhto.javaStudy.RountApi;
 import com.yamhto.javaStudy.RountBase;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -30,6 +31,8 @@ public class Test {
         RountApi api = (RountApi) map.get("B");
 
         a.invoke("B", api);
+
+
 
 
     }

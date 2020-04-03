@@ -16,6 +16,7 @@
         <module>spring-mybatis</module>
         <module>spring-quartz</module>
         <module>spring-all</module>
+        <module>spring-activiti</module>
     </modules>
 
     <properties>
