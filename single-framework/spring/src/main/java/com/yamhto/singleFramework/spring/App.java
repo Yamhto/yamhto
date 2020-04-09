@@ -1,5 +1,6 @@
 package com.yamhto.singleFramework.spring;
 
+import com.yamhto.singleFramework.spring.aop.LogTest;
 import com.yamhto.singleFramework.spring.bean.SpringBean;
 import com.yamhto.singleFramework.spring.importBean.SpringFactoryBean;
 import org.springframework.context.ApplicationContext;
@@ -23,8 +24,8 @@ public class App {
 
         System.out.println(factoryBean);*/
 
-        SpringBean bean = (SpringBean) context.getBean("springBean");
+        LogTest bean = (LogTest) context.getBean(LogTest.class);
 
-        System.out.println(bean.getId()+"\n"+bean.isSingle());
+        bean.test();
     }
 }

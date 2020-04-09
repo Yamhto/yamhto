@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
  * @date 2020/4/3 11:33
  */
 @Aspect
-@Component
 public class LogAspect {
 
     private final Logger log = LoggerFactory.getLogger(getClass());

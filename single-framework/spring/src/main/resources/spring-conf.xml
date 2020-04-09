@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!--<bean id="springBean" class="com.yamhto.singleFramework.spring.bean.SpringBean"></bean>-->
-    <!--<bean id="springBean" class="com.yamhto.singleFramework.spring.importBean.SpringFactoryBean"></bean>-->
-
+    <!--开启自动包扫描-->
     <bean class="com.yamhto.singleFramework.spring.importBean.SpringBeanDefinitionRegistry"></bean>
+
+    <bean class="com.yamhto.singleFramework.spring.aop.Aspect"></bean>
+
+    <bean class="com.yamhto.singleFramework.spring.aop.LogTest"></bean>
+
+    <!--使用AspectJ注解-->
+    <aop:aspectj-autoproxy/>
 
 </beans>

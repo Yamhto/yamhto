@@ -14,6 +14,7 @@
         <module>common-utils</module>
         <module>spring-integration</module>
         <module>springboot-integration</module>
+        <module>java-spi</module>
     </modules>
 
     <properties>
