@@ -24,7 +24,7 @@ public class TestVolatile {
 }
 
 class ThreadDemo implements Runnable{ //这个线程是用来修改flag的值的
-    public volatile   boolean flag = false;
+    public volatile  boolean flag = false;
     @Override
     public void run() {
         try {
