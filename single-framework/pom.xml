@@ -23,7 +23,7 @@
         <mysql-connector.version>8.0.17</mysql-connector.version>
         <mapper.version>4.0.0</mapper.version>
         <mapper-generator.version>1.0.0</mapper-generator.version>
-        <spring.version>5.1.9.RELEASE</spring.version>
+        <spring.version>5.3.19</spring.version>
     </properties>
 
     <dependencyManagement>
